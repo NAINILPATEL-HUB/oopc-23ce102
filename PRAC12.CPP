@@ -18,7 +18,7 @@ private:
     int p_credit[3] = {1, 1, 1};
     float sum;
     float total_credit;
-    float cgpa;
+    float sgpa;
 
 public:
     void getDetails() {
@@ -103,14 +103,14 @@ public:
         }
     }
 
-    void calculateCGPA() {
+    void calculateSGPA() {
         sum = 0;
         total_credit = 0;
         for (int i = 0; i < 3; i++) {
             sum += gp1[i] * t_credit[i] + gp2[i] * p_credit[i];
             total_credit += t_credit[i] + p_credit[i];
         }
-        cgpa = sum / total_credit;
+        sgpa = sum / total_credit;
     }
 
     void printMarksheet() {
@@ -125,7 +125,7 @@ public:
             cout << left << setw(20) << subject[i] << setw(15) << grade1[i] << setw(15) << grade2[i] << "\n";
         }
 
-        cout << "\nCGPA is: " << setw(20) << setprecision(2) << cgpa << endl;
+        cout << "\nSGPA is: " << setw(20) <<  setprecision(2) << sgpa << endl;
     }
 };
 
@@ -133,7 +133,7 @@ int main() {
     Student student;
     student.getDetails();
     student.calculateGrades();
-    student.calculateCGPA();
+    student.calculateSGPA();
     student.printMarksheet();
     return 0;
 }
