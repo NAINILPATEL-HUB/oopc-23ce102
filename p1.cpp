@@ -14,7 +14,7 @@ void print_marksheet()
     string student_name, student_id;
     int semester, i, theory[3], pract[3], gp1[3], gp2[3];
     int t_credit[3] = {2, 2, 2}, p_credit[3] = {1, 1, 1};
-    float sum = 0, total_credit = 0, cgpa;
+    float sum = 0, total_credit = 0, sgpa;
     string subject[3], grade1[3], grade2[3];
 
     cout << "Enter student id  :";
@@ -116,8 +116,8 @@ void print_marksheet()
           total_credit += t_credit[i] + p_credit[i];
         }
 
-     cgpa = sum / total_credit;
+     sgpa = sum / total_credit; 
 
-cout << "\nCGPA is: " << setw(20)<<setprecision(2) << cgpa << endl;
+cout << "\n SGPA is: " << setw(20)<<setprecision(2) << sgpa << endl; 
 
 }
